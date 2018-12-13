@@ -21,6 +21,7 @@ public class Ad {
         return data.location_string;
     }
 
+    public double getTempPriceAsDouble() { return Double.parseDouble(this.getTempPrice()); }
     public String getCountrycode() {
         return data.countrycode;
     }

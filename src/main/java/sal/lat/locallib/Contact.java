@@ -11,6 +11,25 @@ public class Contact {
         public String getUsername(){ return username; }
     }
 
+    public class Advertisement {
+        private long id;
+
+        public long getId() {
+            return id;
+        }
+
+        public Ad.TradeType getTradeType() {
+            return trade_type;
+        }
+
+        public Profile getAdvertiser() {
+            return advertiser;
+        }
+
+        private Ad.TradeType trade_type;
+        private Profile advertiser;
+    }
+
     private class Data {
         private Profile buyer;
         private Profile seller;
@@ -23,8 +42,11 @@ public class Contact {
         private Date payment_completed_at;
         private Date disputed_at;
         private Date closed_at;
+        private Advertisement advertisement;
 
     }
+
+    public Advertisement getAdvertisement() { return data.advertisement; }
 
     public Profile getBuyer() {
         return data.buyer;

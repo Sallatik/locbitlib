@@ -10,8 +10,12 @@ public class Test {
     static String secret = "076e710afe4868f82f3b9989cc1aaa746e9f815268a6fb338e0bdc5ddff9a1f7";
     public static void main(String[] args) throws Exception {
         AuthenticatedApiContext api = new AuthenticatedApiContext(key, secret);
-        long id = 32338477;
-        api.exec(new ContactMessagePost(id).setMsg("a"));
+        long id = 32338476;
+        String username = api.exec(new DashboardClosed())[0]
+                .getAdvertisement()
+                .getAdvertiser()
+                .getUsername();
+        System.out.println(username);
 
     }
 }
