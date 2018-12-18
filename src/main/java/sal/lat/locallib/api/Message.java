@@ -8,7 +8,7 @@ public class Message {
         long id;
         String name;
         String username;
-        int trade_count;
+        String trade_count;
 
         public long getId() {
             return id;
@@ -22,7 +22,7 @@ public class Message {
             return username;
         }
 
-        public int getTrade_count() {
+        public String getTradeCount() {
             return trade_count;
         }
 
